@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./01-interest-calculator.js"></script> 
+    <h1>Interest Calculator</h1>
+    <p>This page contains a number of different ways to calculate interest on an amount of money being either invested or as a loan, such as:</p>
+    <ul>
+        <li>Car loan</li>
+        <li>Mortgage</li>
+        <li>Interest account</li>
+    </ul>
+    <p>The following types of interest will be calculated based on an initial investment or loan amount, the interest rate applied and whether it is basic or compounded interest:</p>
+    <ul>
+        <li>Basic non-compounded interest</li>
+        <li>Yearly compounded interest</li>
+        <li>Daily compounded interest</li>
+    </ul>
+    <h2>Variables</h2>
+    <p>The following values are needed for the interest calculations</p>
+    <form id="initialValues">
+        <label for="initialAmount" style="margin-left: 50px"><b>Initial loan or investment amount</b></label><br>
+        <input type="number" id="initialAmount" name="initialAmount" style="margin-left: 50px" value="0"><br>    
+        <label for="interestRate" style="margin-left: 50px"><b>Interest rate</b></label><br>
+        <input type="number" id="interestRate" name="interestRate" style="margin-left: 50px" value="0"><br>    
+        <label for="loanTenure" style="margin-left: 50px"><b>Loan tenure</b></label><br>
+        <input type="number" id="loanTenure" name="loanTenure" style="margin-left: 50px" value="0"><br>
+        <br>
+        <input type="button" style="margin-left: 50px" value="Submit" onclick="runCalculations.calculateFinalValues()">
+        <input type="reset" style="margin-left: 50px" value="Reset Values">   
+    </form>
+
+    <h2>Simple Interest Calculation</h2>
+    <p>Final amount based on simple interest where interest is added in a single amount:</p>
+    <p type="number" id="simpleResult" style="margin-left: 50px; font-weight: bold"></p>
+    <h2>Compound Interest</h2>
+    <p>Final amount where interest is compounded annually:</p>
+    <p id="finalAnnualResult" style="margin-left: 50px; font-weight: bold"><b></b></p>
+    <p>Final amount where interest is compounded monthly:</p>
+    <p id="finalMonthlyResult" style="margin-left: 50px; font-weight: bold"><b></b></p>
+    <p>Final amount where interest is compounded daily:</p>
+    <p id="finalDailyResult" style="margin-left: 50px; font-weight: bold"><b></b></p>
+   
+</body>
+</html>
