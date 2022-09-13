@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./01-class-capture-array-manipulation.css">
+    <title>Capture Objects with class and store and search with array</title>
+</head>
+<body>
+    <script src="./01-class-capture-array-manipulation.js"></script>
+    <h1>Capture Objects with class and store and search with array</h1>
+    <p>This page will capture a number of objects as a class within an array and allow searching of the objects through the array</p>
+
+    <h2>Capture Lego Set Objects</h2>
+    <p>Complete the fields below and click 'Save'</p>
+    <p>Mandatory fields marked with *</p>
+
+    <form id="captureLegoSets">
+        <label for="setName">Lego Set Name</label><br>
+        <input class="input input1" type="text" id="setName" name="setName" value="" required>*<br>    
+        <label for="setTheme">Set Theme</label><br>
+        <input class="input input1" type="text" id="setTheme" name="setTheme" value=""><br>    
+        <label for="setReferenceNumber">Reference Number</label><br>
+        <input class="input input1" type="number" id="setReferenceNumber" name="setReferenceNumber" min="1" required>*<br>
+        <label for="setPieceCount">Piece Count</label><br>
+        <input class="input input1" type="number" id="setPieceCount" name="setPieceCount" min="1" required>*<br>
+        <br>
+        <input class="input input2" type="button" value="Save Set" onclick="captureLegoSets.captureSets()"> 
+        <input class="input input2" type="button" value="Console all sets" onclick="captureLegoSets.consoleSets()">
+<!--        <input class="input input2" type="submit" value="Save Set" onclick="captureLegoSets.captureSets()"> -->
+        <input class="input input2" type="reset" value="Reset Values">   
+    </form>
+
+
+    <h2>Search through Objects</h2>
+    <p>Click the required button to click through the stored objects</p>
+    <ul>
+        <li>Next - Displays the next item in the array</li>
+        <li>Previous - Displays the previous item in the array</li>
+        <li>Random - displays a random item from the array</li>
+        <li>Reset - resets the array to a blank set of fields</li>
+        <li>Display First - displays the first item in the array</li>
+        <li>Display Last - displays the last item in the array</li>
+    </ul>
+    <br>
+    <label for="displaySetName">Lego Set Name</label><br>
+    <p class="p p2" type="text" id="displaySetName" value=""></p>    
+    <label for="displaySetTheme">Set Theme</label><br>
+    <p class="p p2" type="text" id="displaySetTheme" value=""></p>
+    <label for="displaySetReferenceNumber">Reference Number</label><br>
+    <p class="p p2" type="text" id="displaySetReferenceNumber"></p>
+    <label for="displaySetPieceCount">Piece Count</label><br>
+    <p class="p p2" type="text" id="displaySetPieceCount"></p>
+
+    <button style="margin-left: 50px;" onclick="captureLegoSets.displayFirst()">Display First</button>
+    <button onclick="captureLegoSets.displayLast()">Display Last</button>
+    <button onclick="captureLegoSets.displayNext()">Next</button>
+    <button onclick="captureLegoSets.displayPrevious()">Previous</button>
+    <button onclick="captureLegoSets.displayRandom()">Random</button>
+    <button onclick="captureLegoSets.displayReset()">Reset Display</button>
+    <button onclick="captureLegoSets.displayDeleteAllObjects()">Delete All Objects</button>
+
+</body>
+</html>
